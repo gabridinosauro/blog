@@ -122,7 +122,6 @@ asvtab_dust= asvtab_dust[,match(rownames(sam_data_dust),colnames(asvtab_dust))]
 rownames(sam_data_dust)== colnames(asvtab_dust) # ok
 taxo = generate.tax.summary.modified(t(asvtab_dust), taxa)
 
-taxo = generate.tax.summary.modified(t(ASVtab), TAXtab)
 Phylum_tab  = taxo$tax3
 tab_rel = decostand(Phylum_tab, 2,method = "total")
 colSums(tab_rel) # ok
@@ -135,7 +134,7 @@ anova(richness.lmer)
 Phylum = ggplot(sam_data_dust, aes(x = Dust_Type, y = unknown)) +
   geom_boxplot(outlier.shape = NA) + 
   geom_jitter(aes(color = Point_type )) +
-  labs(x = "Elevation", y = "log(Relative abundance)") + 
+  labs(x = "Elevation", y = "Relative abundance") + 
    theme_bw() + ggtitle("Phylum - unknown")
 Phylum
 
@@ -152,7 +151,7 @@ anova(richness.lmer)
 Class = ggplot(sam_data_dust, aes(x = Dust_Type, y = unknown)) +
   geom_boxplot(outlier.shape = NA) + 
   geom_jitter(aes(color = Point_type )) +
-  labs(x = "Elevation", y = "log(Relative abundance)") + 
+  labs(x = "Elevation", y = "Relative abundance") + 
   theme_bw() + ggtitle("Class - unknown")
 Class
 
@@ -170,7 +169,7 @@ anova(richness.lmer)
 Order = ggplot(sam_data_dust, aes(x = Dust_Type, y = unknown)) +
   geom_boxplot(outlier.shape = NA) + 
   geom_jitter(aes(color = Point_type )) +
-  labs(x = "Elevation", y = "log(Relative abundance)") + 
+  labs(x = "Elevation", y = "Relative abundance") + 
   theme_bw() + ggtitle("Order - unknown")
 Order
 
@@ -187,7 +186,7 @@ anova(richness.lmer)
 Family = ggplot(sam_data_dust, aes(x = Dust_Type, y = unknown)) +
   geom_boxplot(outlier.shape = NA) + 
   geom_jitter(aes(color = Point_type )) +
-  labs(x = "Elevation", y = "log(Relative abundance)") + 
+  labs(x = "Elevation", y = "Relative abundance") + 
   theme_bw() + ggtitle("Family - unknown")
 Family
 
@@ -205,7 +204,7 @@ anova(richness.lmer)
 Genus = ggplot(sam_data_dust, aes(x = Dust_Type, y = unknown)) +
   geom_boxplot(outlier.shape = NA) + 
   geom_jitter(aes(color = Point_type )) +
-  labs(x = "Elevation", y = "log(Relative abundance)") + 
+  labs(x = "Elevation", y = "Relative abundance") + 
   theme_bw() + ggtitle("Genus - unknown")
 Genus
 
